@@ -1,7 +1,11 @@
 # Projeto Práticos do Bootcamp HTML Web Developer da Digital Innovation One
 
-## Recriando página inicial do Instagram
+Bootcamp disponível em: [https://web.digitalinnovation.one/](https://web.digitalinnovation.one/)
 
-## Recriando a Interface do Netflix
+## Projetos:
 
-## Recriando o jogo da cobrinha com JavaScript
+- ~~Recriando página inicial do Instagram~~
+
+- Recriando a Interface do Netflix
+
+- Recriando o jogo da cobrinha com JavaScript
