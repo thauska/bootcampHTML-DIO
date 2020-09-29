@@ -11,7 +11,7 @@
 
 body {
     background: var(--preto);
-    font-size: 'Times New Roman', Times, serif;
+    font-size: 'Arial', Times, serif;
     color: white;
 }
 
@@ -91,4 +91,8 @@ header nav a:hover {
     height: 100%;
     width: 100%;
     display: block;
+}
+
+.carousel-filmes {
+    margin-top: 5px;
 }
