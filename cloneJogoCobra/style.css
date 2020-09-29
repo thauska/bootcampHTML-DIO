@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 95vh;
+    width: 95;
+    color: darkgreen;
+}
+
 .container {
     display: flex;
     flex-direction: column;
