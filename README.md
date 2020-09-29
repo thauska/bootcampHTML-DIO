@@ -6,6 +6,12 @@ Bootcamp disponível em: [https://web.digitalinnovation.one/](https://web.digita
 
 - ~~Recriando página inicial do Instagram~~
 
+    - Resultado Online: [Clone Instagram](./cloneInstagram/)
+
 - ~~Recriando a Interface do Netflix~~
 
-- Recriando o jogo da cobrinha com JavaScript
+    - Resultado Online: [Clone Netflix](./cloneNetflix/)
+
+- ~~Recriando o jogo da cobrinha com JavaScript~~
+
+    - Resultado Online: [SnakeGame](./cloneJogoCobra/)
