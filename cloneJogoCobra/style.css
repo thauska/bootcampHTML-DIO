@@ -10,3 +10,14 @@
     justify-content: center;
     align-items: center;
 }
+
+#snake {
+    width: 50%;
+}
+
+@media (max-width: 800px) {
+    #snake {
+        width: 100%;
+        height: 100%;
+    }
+}
