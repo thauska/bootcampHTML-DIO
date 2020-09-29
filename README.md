@@ -6,6 +6,6 @@ Bootcamp disponível em: [https://web.digitalinnovation.one/](https://web.digita
 
 - ~~Recriando página inicial do Instagram~~
 
-- Recriando a Interface do Netflix
+- ~~Recriando a Interface do Netflix~~
 
 - Recriando o jogo da cobrinha com JavaScript
