@@ -4,12 +4,20 @@ let box = 32;
 // Verificação se a direção foi trocada na rodada
 let direcaoTrocadaNaRodada = false;
 let snake = [];
+
+const directions = {
+  up: "cima",
+  down: "down",
+  left: "left",
+  right: "right",
+};
+
 snake[0] = {
   x: 8 * box,
   y: 8 * box,
 };
 
-let direction = "right";
+let direction = directions.right;
 let food = {
   x: Math.floor(Math.random() * 15 + 1) * box,
   y: Math.floor(Math.random() * 15 + 1) * box,
@@ -37,37 +45,31 @@ document.addEventListener("keydown", update);
 function update(event) {
   //Trocará direção apenas se a direção ainda não foi trocada na rodada
   if (!direcaoTrocadaNaRodada) {
-    if (event.keyCode == 37 && direction != "right") {
-      direction = "left";
-      direcaoTrocadaNaRodada = true;
-      console.log("Direção modificada para " + direction);
-    }
-    if (event.keyCode == 38 && direction != "down") {
-      direction = "up";
-      direcaoTrocadaNaRodada = true;
-      console.log("Direção modificada para " + direction);
-    }
-    if (event.keyCode == 39 && direction != "left") {
-      direction = "right";
-      direcaoTrocadaNaRodada = true;
-      console.log("Direção modificada para " + direction);
-    }
-    direcaoTrocadaNaRodada = true;
-    if (event.keyCode == 40 && direction != "up") {
-      direction = "down";
-      direcaoTrocadaNaRodada = true;
-      console.log("Direção modificada para " + direction);
-    }
+    if (event.keyCode == 37 && direction != directions.right)
+      changeDirection(directions.left);
+
+    if (event.keyCode == 38 && direction != directions.down)
+      changeDirection(directions.up);
+
+    if (event.keyCode == 39 && direction != directions.left)
+      changeDirection(directions.right);
+
+    if (event.keyCode == 40 && direction != directions.up)
+      changeDirection(directions.down);
   }
+}
+
+function changeDirection(newDirection) {
+  direction = newDirection;
+  direcaoTrocadaNaRodada = true;
 }
 
 function iniciarJogo() {
   //plano cartesiano
-  console.log("Direção atual:" + direction);
-  if (snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
-  if (snake[0].x < 0 && direction == "left") snake[0].x = 16 * box;
-  if (snake[0].y > 15 * box && direction == "down") snake[0].y = 0;
-  if (snake[0].y < 0 && direction == "up") snake[0].y = 16 * box;
+  if (snake[0].x > 15 * box && direction == directions.right) snake[0].x = 0;
+  if (snake[0].x < 0 && direction == directions.left) snake[0].x = 16 * box;
+  if (snake[0].y > 15 * box && direction == directions.down) snake[0].y = 0;
+  if (snake[0].y < 0 && direction == directions.up) snake[0].y = 16 * box;
 
   for (i = 1; i < snake.length; i++) {
     if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
@@ -83,10 +85,10 @@ function iniciarJogo() {
   let snakeX = snake[0].x;
   let snakeY = snake[0].y;
 
-  if (direction == "right") snakeX += box;
-  if (direction == "left") snakeX -= box;
-  if (direction == "up") snakeY -= box;
-  if (direction == "down") snakeY += box;
+  if (direction == directions.right) snakeX += box;
+  if (direction == directions.left) snakeX -= box;
+  if (direction == directions.up) snakeY -= box;
+  if (direction == directions.down) snakeY += box;
 
   if (snakeX != food.x || snakeY != food.y) {
     snake.pop();
